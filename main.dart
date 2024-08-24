@@ -40,4 +40,12 @@ void main() {
   // 수정 불가능 변수
   final person = 'Jhon';
   // person = 'Ann'; 불가
+
+  // 초기 데이터 없이 선언할 수 있는 변수
+  late final dog;
+  // do something
+  // print(dog); 값을 넣기 전에 함수를 사용하는 것을 방지
+  dog = 'dog';
+  print(dog);
+  // 변수를 만들고 api 요청이 들어왔을 때 값을 넣어줄 때 많이 사용하게 됨
 }
