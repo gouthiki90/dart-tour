@@ -36,4 +36,8 @@ void main() {
   // ->
   nico?.isNotEmpty;
   // 간단하게 null 체크가 가능
+
+  // 수정 불가능 변수
+  final person = 'Jhon';
+  // person = 'Ann'; 불가
 }
