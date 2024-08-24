@@ -48,4 +48,10 @@ void main() {
   dog = 'dog';
   print(dog);
   // 변수를 만들고 api 요청이 들어왔을 때 값을 넣어줄 때 많이 사용하게 됨
+
+  // 상수
+  // compile time constant를 만듦
+  // 앱을 퍼블리쉬하기 전에 알고 있는 값을 명명할 때 사용함
+  const max_allowed_price = 120;
+  // 사용자가 입력하는 값과 같은 변수는 final, var가 좋음
 }
