@@ -21,4 +21,19 @@ void main() {
     // home. 를 해서 보면 메소드가 많아진다.
     // 지역 변수로 들어갈 땐 타입을 확인하는 게 좋다.
   }
+  // 변수가 모호하기 때문에 정말로 필요할 때만 사용하는 게 좋다.
+
+  // null safty: 런타임 에러가 생김(NoSuchMethodError)
+  // 컴파일이 잡지 못하는 null error를 잡음
+  String? nico = 'nico';
+  nico = null;
+  // 타입 옆에 붙이면 null이 있을 수 있다는 것을 명명함
+  //nico.length;
+  // The property 'length' can't be unconditionally accessed because the receiver can be 'null'.
+  if (nico != null) {
+    nico.isNotEmpty;
+  }
+  // ->
+  nico?.isNotEmpty;
+  // 간단하게 null 체크가 가능
 }
