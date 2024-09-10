@@ -1,6 +1,8 @@
 // dart는 auto formatter가 없다.
 // 따라서 세미콜론을 반드시 붙여주어야 한다.
 // casecode 퓨처가 있기 때문에 세미콜론에 대한 포매터가 존재하지 않음.
+import 'dart:ffi';
+
 void main() {
   print('hello world');
 
@@ -107,4 +109,48 @@ void main() {
   //   print(newFrineds);
   // }
   print(newFrineds);
+
+  // Maps
+  // 해당 변수의 자료형은 Map이다.
+  // var를 사용할 때는 자료형을 따로 명시해줄 필요가 없다.
+  // 컴파일러가 자료형을 정해주기 때문이다.
+  var player = {
+    'name': 'nico',
+    'xp': 19.99,
+    'superpower': false,
+  };
+  // key, value값으로 Map<String, Object> 타입이 된다.
+
+  // 임의로 자료형을 정해두고 선언할 수도 있다.
+  Map<int, bool> palyer2 = {
+    1: true,
+    2: false,
+    3: true,
+  };
+
+  // 예시
+  Map<List<int>, bool> palyer3 = {
+    [
+      1,
+      2,
+    ]: true,
+    [
+      3,
+      4,
+    ]: false,
+    [
+      5,
+      6,
+    ]: true,
+  };
+
+  // 모든 객체는 class로 이루어져있기 때문에 method와 property를 모두 가지고 있다.
+  // player.isEmpty()
+  List<Map<String, Object>> playerss = [
+    {
+      'name': 'nico',
+      'xp': 12234.111,
+    }
+  ];
+  // key value값을 설정할 때 API 값과 같은 데이터를 다루게 된다면 Map을 사용하는 것보다 class를 사용하는 것이 dart에 최적이다.
 }
