@@ -83,4 +83,12 @@ void main() {
   print(numberss);
   numbers.add(1);
   numberss.first; // 첫 번째 값 가져오기
+
+  // String Interpolation
+  var animanl = 'cat';
+  var age = 10;
+  // 문자열에 변수 넣기 $ / 문자열에 수식 넣기${}
+  var greeting =
+      'Hello everyone, my name is $animanl and I\'m ${age + 2} nice to meet you';
+  print(greeting);
 }
