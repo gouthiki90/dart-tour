@@ -40,6 +40,22 @@ String capitallizeName(String? name) => name?.toUpperCase() ?? 'ANON';
 
 // return 'ANON';
 
+// 임의로 지정한 타입
+typedef ListOfInts = List<int>;
+ListOfInts reverseListOfNumbers(ListOfInts list) {
+  var reversed = list.reversed;
+  return reversed.toList();
+}
+
+// 만약 구조화된 data의 형태를 지정하고 싶다면 map 보다 class를 사용하는 게 맞을 것이다.
+typedef UserInfo = Map<String, String>;
+
+// 유저가 방문할 때마다 인사를 하는 함수를 만들고 싶다.
+// 안에 들어갈 데이터를 구체화 하고 싶다면...
+String sayHi(UserInfo userInfo) {
+  return "Hi ${userInfo['name']}";
+}
+
 void main() {
   // function
   print(sayBye('nico'));
@@ -71,4 +87,11 @@ void main() {
   name = null;
   name ??= 'another';
   print(name);
+
+  // typedef
+  print(reverseListOfNumbers([1, 2, 3]));
+  // [3, 2, 1]
+  print(sayHi({
+    "name": 'nico',
+  }));
 }
