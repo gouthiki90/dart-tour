@@ -22,6 +22,10 @@ String sayHelloHello(
 //   return "Hello $name, you are $age, and you come forom $country";
 // }
 
+// 옵셔널로 필수 파라미터를 제외할 수 있다.
+String sayByeHello(String name, int age, [String? country = 'cuba']) =>
+    "Hello $name, you are $age, and you come forom $country";
+
 void main() {
   // function
   print(sayBye('nico'));
@@ -37,4 +41,9 @@ void main() {
     name: 'nico',
   );
   // sayHelloHello();
+
+  // optional positional parameters
+  var result = sayByeHello('name', 12);
+  print(result);
+  // Hello name, you are 12, and you come forom cuba
 }
