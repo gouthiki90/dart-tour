@@ -63,4 +63,24 @@ void main() {
   bool b = false;
   num x = 12; // int, double의 부모객체
   x = 1.1;
+
+  // List
+  // 모두 class로 되어있고 object를 상속받고 있다.
+  var numbers = [
+    1,
+    2,
+    3,
+    4,
+  ];
+  var giveMeFive = true;
+  List<int> numberss = [
+    1,
+    2,
+    3,
+    4,
+    if (giveMeFive) 5, // 리스트 안에서 조건문이 가능
+  ]; // 마지막에 쉼표를 추가함으로써 더 깔끔한 포맷팅 가능
+  print(numberss);
+  numbers.add(1);
+  numberss.first; // 첫 번째 값 가져오기
 }
