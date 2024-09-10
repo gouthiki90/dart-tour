@@ -91,4 +91,20 @@ void main() {
   var greeting =
       'Hello everyone, my name is $animanl and I\'m ${age + 2} nice to meet you';
   print(greeting);
+
+  // Collection For
+  var oldFrineds = ['nice', 'lynn'];
+  // nav를 만들거나 UI 리스트를 만들 때 자주 사용하게 될 것임
+  var newFrineds = [
+    'lewis',
+    'ralph',
+    'darren',
+    for (var friend in oldFrineds) "💖 $friend"
+  ];
+  // 이를 쉽게 줄일 수 있다.
+  // for (var friend in oldFrineds) {
+  //   newFrineds.add("💖 $friend");
+  //   print(newFrineds);
+  // }
+  print(newFrineds);
 }
