@@ -54,4 +54,13 @@ void main() {
   // 앱을 퍼블리쉬하기 전에 알고 있는 값을 명명할 때 사용함
   const max_allowed_price = 120;
   // 사용자가 입력하는 값과 같은 변수는 final, var가 좋음
+
+  // 자료형
+  // dart는 모든 타입이 object로 이루어져있음
+  String s = "object";
+  int i = 11;
+  double d = 0.0;
+  bool b = false;
+  num x = 12; // int, double의 부모객체
+  x = 1.1;
 }
