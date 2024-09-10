@@ -153,4 +153,18 @@ void main() {
     }
   ];
   // key value값을 설정할 때 API 값과 같은 데이터를 다루게 된다면 Map을 사용하는 것보다 class를 사용하는 것이 dart에 최적이다.
+
+  // Set
+  // 안에 들어있는 모든 값은 유니크값이 된다.
+  Set<int> numbersss = {
+    1,
+    2,
+    3,
+    4,
+  };
+  numbersss.add(1);
+  numbersss.add(1);
+  numbersss.add(1);
+  print(numbersss); // 1이 중복되지 않음
+  // python의 tuple 타입과 같음
 }
