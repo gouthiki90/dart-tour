@@ -1,4 +1,6 @@
 // void = return하지 않는 함수
+import 'dart:mirrors';
+
 void sayHello(String name) {
   // call api
   // ...
@@ -26,6 +28,18 @@ String sayHelloHello(
 String sayByeHello(String name, int age, [String? country = 'cuba']) =>
     "Hello $name, you are $age, and you come forom $country";
 
+String capitallizeName(String? name) => name?.toUpperCase() ?? 'ANON';
+// QQ operator
+//  left ?? right
+// left가 null일 때 right를 return한다.
+// 이렇게 쓸 수도 있지만...
+// name != null ? name.toUpperCase() : 'ANON';
+// if (name != null) {
+//   return name.toUpperCase();
+// }
+
+// return 'ANON';
+
 void main() {
   // function
   print(sayBye('nico'));
@@ -46,4 +60,15 @@ void main() {
   var result = sayByeHello('name', 12);
   print(result);
   // Hello name, you are 12, and you come forom cuba
+
+  // operator
+  capitallizeName('nico');
+  capitallizeName(null);
+
+  String? name;
+  // name이 null일 때 좌항을 return한다.
+  name ??= 'nico';
+  name = null;
+  name ??= 'another';
+  print(name);
 }
