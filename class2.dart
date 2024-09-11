@@ -1,11 +1,22 @@
+// 추상화 class
+abstract class Human {
+  // 원하는 함수, 파라미터 등을 정의
+  void walk();
+}
+
 // 타입을 지정하여 파라미터 작성 시 실수를 줄여줄 수 있다.
 // 예를 들어 css의 padding 값 등
 enum Team { red, blue }
 
-class Player {
+class Player extends Human {
   String name;
   int xp;
   Team team;
+
+// 함수를 상속받는 것을 강제로 하게 되어있음
+  void walk() {
+    print('I\'m walking');
+  }
 
   // 생성자
   // class에서 이미 타입을 지정해뒀기 때문에 생성자에서 타입을 다시 지정할 필요가 없다.
