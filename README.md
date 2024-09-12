@@ -8,7 +8,7 @@
 - \#1 Variables  :white_check_mark:
 - \#2 Data Types :white_check_mark:
 - \#3 Functions :white_check_mark:
-- \#4 Classes
+- \#4 Classes :white_check_mark:
 
 
 
@@ -21,5 +21,5 @@
 
 ## 강의 목표
 
-- 모든 강의 완수
-- 코딩 재활
+- ~~모든 강의 완수~~
+- ~~코딩 재활~~
